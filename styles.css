@@ -26,7 +26,7 @@
 }
 
 body {
-    background-color: cornflowerblue;
+    background-color: hsla(180, 66%, 49%, 0.3);
     display: flex;
     justify-content: center;
 }
@@ -108,7 +108,7 @@ body {
 
 .hero {
     display: flex;
-    height: 638px; /* 550px + 88px = 638px (85px) */
+    height: 638px; /* 550px + 85px = 635px */
     overflow: hidden;
     width: 1275px;
 }
@@ -121,6 +121,7 @@ body {
 }
 
 .advertising > h1 {
+    -webkit-user-select: none;
     color: hsl(255, 11%, 22%);
     cursor: default;
     font-size: 80px;
@@ -154,20 +155,61 @@ body {
     width: 200px;
 }
 
-.main-image-container {
-    border: 1px solid blue;
-    width: 730px;
-}
-
 .hero img {
     height: 485px;
     width: 730px;
 }
 
+.page-middle {
+    background-color: hsl(230, 25%, 95%);
+    height: 218px;
+}
 
+.shorten-container {
+    align-items: center;
+    background-color: hsl(257, 27%, 26%);
+    background-image: url('images/bg-shorten-desktop.svg');
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    bottom: 85px;
+    display: flex;
+    height: 168px;
+    margin-left: 165px;
+    position: relative;
+    width: 1112px;
+}
 
+#new-link {
+    border: none;
+    border-radius: 10px;
+    height: 65px;
+    margin-left: 65px;
+    margin-right: 24px;
+    outline-color: hsl(0, 87%, 67%);
+    outline-style: hidden;
+    padding-left: 28px;
+    padding-top: 9px;
+    width: 768px;
+}
 
+.shorten-container ::placeholder {
+    /* why '#new-link ::placeholder{}' does not work? */
+    color: hsl(257, 7%, 63%);
+    font-size: 20px;
+}
 
+.shorten-container > button {
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    border-radius: 10px;
+    color: hsl(360, 100%, 100%);
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 700;
+    height: 65px;
+    letter-spacing: 0.02em;
+    width: 190px;
+}
 
 
 
