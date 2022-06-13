@@ -19,11 +19,9 @@ body {
     height: 1800px;
 }
 
-
 .page-top {
     margin-left: 165px;
 }
-
 
 .main-menu {
     align-items: center;
@@ -53,10 +51,17 @@ body {
     width: 265px;
 }
 
-.main-navigation a:link,
-.main-navigation a:visited {
+.main-menu a:link,
+.main-menu a:visited {
     color: hsl(257, 7%, 63%);
     text-decoration: none;
+}
+
+.main-menu a:hover,
+.main-menu a:visited:hover,
+.main-menu a:active,
+.main-menu a:visited:active {
+    color: hsl(255, 11%, 22%);
 }
 
 .access {
@@ -80,12 +85,6 @@ body {
     font-weight: 700;
     height: 40px;
     width: 106px;
-}
-
-.access a:link,
-.access a:visited {
-    color: hsl(257, 7%, 63%);
-    text-decoration: none;
 }
 
 .hero {
@@ -385,4 +384,22 @@ body {
 
 ul li {
     margin-bottom: 8px;
+}
+
+li a:link,
+li a:visited {
+    color: hsl(257, 7%, 63%);
+    text-decoration: none;
+}
+
+li a:hover,
+li a:visited:hover,
+li a:active,
+li a:visited:active {
+    color: hsl(180, 66%, 49%);
+}
+
+.icon a img:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(52%) saturate(1440%)
+            hue-rotate(131deg) brightness(86%) contrast(87%);
 }
