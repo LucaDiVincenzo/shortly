@@ -142,6 +142,11 @@ body {
     width: 730px;
 }
 
+.page-middle {
+    background-color:hsl(230, 25%, 95%);
+    height: 910px;
+}
+
 .shorten-container {
     align-items: center;
     background-color: hsl(257, 27%, 26%);
@@ -188,73 +193,29 @@ body {
     width: 190px;
 }
 
+/* Joining point */
 
-
-
-
-.a {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(180, 66%, 49%);
-}
-
-.b {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(257, 27%, 26%);
-}
-
-.c {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(0, 87%, 67%);
-}
-
-.d {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(0, 0%, 75%);
-}
-
-.e {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(257, 7%, 63%);
-}
-
-.f {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(255, 11%, 22%);
-}
-
-.g {
-    height: 40px;
-    width: 540px;
-    background-color: hsl(260, 8%, 14%);
-}
-
-.page-middle{
-    background-color:hsl(230, 25%, 95%);
-    height: 680px;
-}
-.first_div{
+.first_div {
+    margin-bottom: 80px;
     margin-left: 500px;
+    margin-top: 38px;
 }
-.title_secondhalf{
+
+.title_second_half {
     font-weight: 700;
     color: black;
     font-size: 32px;
     margin-left: 50px;
 }
-.paragraph_secondhalf{
+
+.paragraph_second_half {
     color: gray;
     font-size: 14px;
     text-align: center;
     margin-right: 500px;
 }
 
-.first_menu{
+.first_menu {
     border-radius: 10px;
     background-color: white;
     margin-top: 50px;
@@ -262,7 +223,8 @@ body {
     width: 340px;
     height: 240px;
 }
-.second_menu{
+
+.second_menu {
     border-radius: 10px;
     background-color: white;
     margin-top: -190px;
@@ -270,7 +232,8 @@ body {
     width: 340px;
     height: 240px;
 }
-.third_menu{
+
+.third_menu {
     border-radius: 10px;
     background-color: white;
     margin-left: 925px;
@@ -279,15 +242,18 @@ body {
     height: 240px;
     margin-bottom: 40px;
 }
-.color_h3{
+
+.color_h3 {
     margin-left: 12px;
     margin-top: -20px;
 }
-.color_p{
+
+.color_p {
     margin-left: 12px;
     color: grey;
 }
-.image_container{
+
+.image_container {
     position: relative;
     background-color: rgb(5, 5, 83);
     height: 75px;
@@ -297,31 +263,35 @@ body {
     top: -35px;
 }
 
-.brand{
+.brand {
     margin-left: 16px;
     margin-top: 15px;
     height: 40px;
     width: 40px;
 }
 
-.detailed{
+.detailed {
     height: 40px;
     width: 40px;
     margin-left: 18px;
     margin-top: 16px;
 }
-.fully{
+
+.fully {
     height: 40px;
     width: 40px;
     margin-left: 18px;
     margin-top: 16px;
 }
-.page-bottom{
+
+.page-bottom {
     display: flex;
     background-color: rgb(45, 45, 58);
 }
-.button{
+
+.button {
     background-color: rgb(0, 213, 255);
+    border: none;
     color: white;
     font-size: 20px;
     width: 200px;
@@ -330,24 +300,28 @@ body {
     margin-top: 120px;
     border-radius: 25px;
 }
-.boost{
+
+.boost {
     position: absolute;
     color: white;
     font-size: 30px;
     margin-left: 580px;
     margin-top: 40px;
 }
-.last{
+
+.last {
     display: flex;
     background-color: rgb(39, 39, 39);
 }
-.shortly{
+
+.shortly {
     color: white;
     margin-left: 140px;
     margin-top: 40px;
     font-size: 30px;
 }
-.first_block{
+
+.first_block {
     display: flex;
     flex-direction: column;
     color: gray;
@@ -355,10 +329,12 @@ body {
     font-size: 12px;
     margin-top: 30px;
 }
-.first_block > ul{
+
+.first_block > ul {
     list-style-type: none;
 }
-.second_block{
+
+.second_block {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
@@ -366,10 +342,12 @@ body {
     margin-left: 100px;
     font-size: 12px;
 }
-.second_block > ul{
+
+.second_block > ul {
     list-style-type: none;
 }
-.third_block{
+
+.third_block {
     display: flex;
     flex-direction: column;
     color: grey;
@@ -377,25 +355,34 @@ body {
     margin-left: 100px;
     font-size: 12px;
 }
-.third_block > ul{
+
+.third_block > ul {
     list-style-type: none;
 }
-.white{
+
+.white {
     color: white;
     font-size: 15px;
-    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
-.last{
+
+.last {
     height: 250px;
 }
-.icon{
+
+.icon {
     display: flex;
     height: 20px;
     width: 20px;
     margin-left: 170px;
-    margin-top: 50px;
+    margin-top: 55px;
 }
+
 .icon img {
     margin-right: 15px;
+}
 
+ul li {
+    margin-bottom: 8px;
 }
