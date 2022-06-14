@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -147,36 +147,45 @@ body {
 }
 
 .shorten-container {
-    align-items: center;
     background-color: hsl(257, 27%, 26%);
     background-image: url('images/bg-shorten-desktop.svg');
     background-repeat: no-repeat;
     border-radius: 10px;
     bottom: 85px;
     display: flex;
-    height: 168px;
+    flex-wrap: wrap;
+    height: 170px;
     margin-left: 165px;
+    padding-top: 52px;
     position: relative;
     width: 1112px;
 }
 
-#new-link {
+.new-link {
     border: none;
     border-radius: 10px;
-    height: 65px;
+    caret-color: hsl(255, 11%, 22%);
+    height: 66px;
     margin-left: 65px;
     margin-right: 24px;
-    outline-color: hsl(0, 87%, 67%);
-    outline-style: hidden;
+    outline-style: none;
     padding-left: 28px;
     padding-top: 9px;
     width: 768px;
+}
+
+.invalid-link .new-link {
+    border: 3px solid hsl(0, 87%, 67%);
 }
 
 .shorten-container ::placeholder {
     /* why '#new-link ::placeholder{}' does not work? */
     color: hsl(257, 7%, 63%);
     font-size: 20px;
+}
+
+.invalid-link ::placeholder {
+    color: hsla(0, 87%, 67%, 0.4);
 }
 
 .shorten-container > button {
@@ -187,9 +196,17 @@ body {
     cursor: pointer;
     font-size: 19px;
     font-weight: 700;
-    height: 65px;
+    height: 66px;
     letter-spacing: 0.02em;
     width: 190px;
+}
+
+.invalid-text {
+    color: hsl(0, 87%, 67%);
+    display: none;
+    font-style: italic;
+    margin-bottom: 16px;
+    margin-left: 65px;
 }
 
 /* Joining point */
