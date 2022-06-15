@@ -24,15 +24,29 @@ function remAlert() {
     access.invText.style.display = 'none';
 }
 
-function linkSubmit() {
-    // const checker = input.value
-    if (input.value !== 'ok') {
-        addAlert();
-        console.log('running addAlert');
+function isValidURL(string) {
+    if (!/^https?:\/\//i.test(string)) {
+        string = 'https://' + string;
     }
-    else if (input.value === 'ok') {
-        remAlert();
-        console.log('running remAlert');
+    console.log(string);
+    const matchPattern = /^(?:\w+:)?\/\/([^\s.]+\.\S{2}|localhost[:?\d]*)\S*$/;
+    return matchPattern.test(string);
+}
+
+function linkSubmit() {
+    const urlChecker = isValidURL(input.value);
+    const alertChecker = access.shorten.classList[1];
+    if (urlChecker === true) {
+        if (alertChecker !== undefined) {
+            remAlert();
+        }
+        console.log(input.value);
+        input.value = null;
+    } else {
+        if (alertChecker !== undefined) {
+            return;
+        }
+        addAlert();
     }
 }
 

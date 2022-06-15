@@ -13,6 +13,11 @@ body {
     justify-content: center;
 }
 
+button, img {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .page {
     background-color: white;
     width: 1440px;
@@ -179,9 +184,10 @@ body {
 }
 
 .shorten-container ::placeholder {
-    /* why '#new-link ::placeholder{}' does not work? */
+    -webkit-user-select: none;
     color: hsl(257, 7%, 63%);
     font-size: 20px;
+    user-select: none;
 }
 
 .invalid-link ::placeholder {
