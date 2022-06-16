@@ -6,12 +6,15 @@ noDrag.forEach( el => {
     el.setAttribute('draggable', 'false')
 });
 
-const input = document.querySelector('#new-link');
-
 const access = {
     shorten: document.querySelector('.shorten-container'),
+    input: document.querySelector('#new-link'),
     invText: document.querySelector('.invalid-text'),
     submit: document.querySelector('.page-middle button'),
+}
+
+const variables = {
+    lastLink: 'Property-value to be overwritten',
 }
 
 function addAlert() {
@@ -24,30 +27,43 @@ function remAlert() {
     access.invText.style.display = 'none';
 }
 
-function isValidURL(string) {
+function isValidUrl(string) {
     if (!/^https?:\/\//i.test(string)) {
         string = 'https://' + string;
     }
-    console.log(string);
     const matchPattern = /^(?:\w+:)?\/\/([^\s.]+\.\S{2}|localhost[:?\d]*)\S*$/;
     return matchPattern.test(string);
 }
 
+function getLink(object) {
+    variables.lastLink = object["result"]["short_link"];
+}
+
+function shortUrl() {
+    const apiBase = 'https://api.shrtco.de/v2/shorten?url=';
+    const apiUrl = apiBase + access.input.value;
+    fetch(apiUrl)
+        .then(rsp => rsp.json())
+        .then(data => getLink(data))
+}
+
 function linkSubmit() {
-    const urlChecker = isValidURL(input.value);
+    const urlChecker = isValidUrl(access.input.value);
     const alertChecker = access.shorten.classList[1];
     if (urlChecker === true) {
         if (alertChecker !== undefined) {
             remAlert();
         }
-        console.log(input.value);
-        input.value = null;
+        shortUrl();
+        // please, after submitting check 'variables.lastLink' in web console
     } else {
         if (alertChecker !== undefined) {
+            access.input.value = null;
             return;
         }
         addAlert();
     }
+    access.input.value = null;
 }
 
 access.submit.addEventListener('click', linkSubmit);
