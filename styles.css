@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -13,17 +13,20 @@ body {
     justify-content: center;
 }
 
+button, img {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .page {
     background-color: white;
     width: 1440px;
     height: 1800px;
 }
 
-
 .page-top {
     margin-left: 165px;
 }
-
 
 .main-menu {
     align-items: center;
@@ -53,10 +56,17 @@ body {
     width: 265px;
 }
 
-.main-navigation a:link,
-.main-navigation a:visited {
+.main-menu a:link,
+.main-menu a:visited {
     color: hsl(257, 7%, 63%);
     text-decoration: none;
+}
+
+.main-menu a:hover,
+.main-menu a:visited:hover,
+.main-menu a:active,
+.main-menu a:visited:active {
+    color: hsl(255, 11%, 22%);
 }
 
 .access {
@@ -80,12 +90,6 @@ body {
     font-weight: 700;
     height: 40px;
     width: 106px;
-}
-
-.access a:link,
-.access a:visited {
-    color: hsl(257, 7%, 63%);
-    text-decoration: none;
 }
 
 .hero {
@@ -148,36 +152,46 @@ body {
 }
 
 .shorten-container {
-    align-items: center;
     background-color: hsl(257, 27%, 26%);
     background-image: url('images/bg-shorten-desktop.svg');
     background-repeat: no-repeat;
     border-radius: 10px;
     bottom: 85px;
     display: flex;
-    height: 168px;
+    flex-wrap: wrap;
+    height: 170px;
     margin-left: 165px;
+    padding-top: 52px;
     position: relative;
     width: 1112px;
 }
 
-#new-link {
+.new-link {
     border: none;
     border-radius: 10px;
-    height: 65px;
+    caret-color: hsl(255, 11%, 22%);
+    height: 66px;
     margin-left: 65px;
     margin-right: 24px;
-    outline-color: hsl(0, 87%, 67%);
-    outline-style: hidden;
+    outline-style: none;
     padding-left: 28px;
     padding-top: 9px;
     width: 768px;
 }
 
+.invalid-link .new-link {
+    border: 3px solid hsl(0, 87%, 67%);
+}
+
 .shorten-container ::placeholder {
-    /* why '#new-link ::placeholder{}' does not work? */
+    -webkit-user-select: none;
     color: hsl(257, 7%, 63%);
     font-size: 20px;
+    user-select: none;
+}
+
+.invalid-link ::placeholder {
+    color: hsla(0, 87%, 67%, 0.4);
 }
 
 .shorten-container > button {
@@ -188,9 +202,17 @@ body {
     cursor: pointer;
     font-size: 19px;
     font-weight: 700;
-    height: 65px;
+    height: 66px;
     letter-spacing: 0.02em;
     width: 190px;
+}
+
+.invalid-text {
+    color: hsl(0, 87%, 67%);
+    display: none;
+    font-style: italic;
+    margin-bottom: 16px;
+    margin-left: 65px;
 }
 
 /* Joining point */
@@ -385,4 +407,22 @@ body {
 
 ul li {
     margin-bottom: 8px;
+}
+
+li a:link,
+li a:visited {
+    color: hsl(257, 7%, 63%);
+    text-decoration: none;
+}
+
+li a:hover,
+li a:visited:hover,
+li a:active,
+li a:visited:active {
+    color: hsl(180, 66%, 49%);
+}
+
+.icon a img:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(52%) saturate(1440%)
+            hue-rotate(131deg) brightness(86%) contrast(87%);
 }
