@@ -47,6 +47,17 @@ function shortUrl() {
         .then(data => getLink(data))
 }
 
+function addLink(text) {
+    const newElement = document.createElement('div');
+    newElement.className = `link`;
+    document.getElementById('shorten').after(newElement);
+    newElement.innerHTML = `
+    <div class="new_container">
+        <p>${text}</p>
+        <button class="copy">Copy</button>
+    </div>`;
+}
+
 function linkSubmit() {
     const urlChecker = isValidUrl(access.input.value);
     const alertChecker = access.shorten.classList[1];
@@ -55,6 +66,7 @@ function linkSubmit() {
             remAlert();
         }
         shortUrl();
+        addLink(access.input.value);
         // please, after submitting check 'variables.lastLink' in web console
     } else {
         if (alertChecker !== undefined) {

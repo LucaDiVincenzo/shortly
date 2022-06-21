@@ -464,4 +464,6 @@ li a:visited:active {
     margin-left: 990px;
     border: none;
     border-radius: 5px;
+    color: white;
+    font-weight: 700;
 }
