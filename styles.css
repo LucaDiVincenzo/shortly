@@ -81,6 +81,9 @@ body {
     height: 40px;
     width: 106px;
 }
+button:hover{
+    background-color: rgb(177, 242, 244);
+}
 
 .access a:link,
 .access a:visited {
@@ -136,6 +139,9 @@ body {
     margin-top: 32px;
     width: 200px;
 }
+button:hover{
+    background-color: rgb(177, 242, 244);
+}
 
 .hero img {
     height: 485px;
@@ -144,7 +150,6 @@ body {
 
 .page-middle {
     background-color:hsl(230, 25%, 95%);
-    height: 910px;
 }
 
 .shorten-container {
@@ -191,6 +196,9 @@ body {
     height: 65px;
     letter-spacing: 0.02em;
     width: 190px;
+}
+button:hover{
+    background-color: rgb(177, 242, 244);
 }
 
 /* Joining point */
@@ -240,7 +248,6 @@ body {
     margin-top: -190px;
     width: 340px;
     height: 240px;
-    margin-bottom: 40px;
 }
 
 .color_h3 {
@@ -283,22 +290,31 @@ body {
     margin-left: 18px;
     margin-top: 16px;
 }
+.vuoto{
+    width: 1440px;
+    height: 150px;
+    background-color: hsl(230, 25%, 95%);
+}
 
 .page-bottom {
     display: flex;
     background-color: rgb(45, 45, 58);
 }
 
-.button {
-    background-color: rgb(0, 213, 255);
+.get-started {
+    background-color: hsl(180, 66%, 49%);
     border: none;
     color: white;
     font-size: 20px;
+    cursor: pointer;
     width: 200px;
     height: 60px;
     margin-left: -800px;
     margin-top: 120px;
     border-radius: 25px;
+}
+button:hover{
+    background-color: rgb(177, 242, 244);
 }
 
 .boost {
@@ -385,4 +401,27 @@ body {
 
 ul li {
     margin-bottom: 8px;
+}
+
+.new_container{
+    display: flex;
+    color: black;
+    background-color: white;
+    margin-left: 160px;
+    font-size: 30px;
+    width: 1120px;
+    height: 65px;
+    margin-top: -60px;
+    border-radius: 5px;
+    margin-bottom: 70px;
+}
+.copy{
+    position: absolute;
+    background-color:hsl(180, 66%, 49%);
+    width: 120px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 990px;
+    border: none;
+    border-radius: 5px;
 }
