@@ -48,20 +48,20 @@
 
     <div class="page-middle">
 
-        <div class="shorten-container">
+        <div class="shorten-container" id="shorten">
 
             <label for="new-link">
-                <input id="new-link" name="add-link" type="text"
+                <input id="new-link" name="add_link" type="text"
                        placeholder="Shorten a link here..."
                        autocomplete="off" class="new-link"/>
             </label>
 
-            <button type="button">Shorten It!</button>
+            <button onclick="insert()" id="press" type="button">Shorten It!</button>
 
             <p class="invalid-text">Please add a link</p>
 
         </div>
-        
+
         <!-- Joining point -->
 
         <div class="first_div">
@@ -112,10 +112,11 @@
             </div>
         </div>
     </div>
+    <div class="vuoto"></div>
     <div class="page-bottom">
         <img class="sfondo" src="images/bg-boost-desktop.svg" alt="">
         <h3 class="boost">Boost your links today</h3>
-        <button class="button"> Get Started </button>
+        <button class="get-started"> Get Started </button>
     </div>
 
     <div class="last">
@@ -153,7 +154,7 @@
         </div>
     </div>
 </div>
-
+        <script type="text/javascript" src="javascript.js"></script>
 </body>
 
 </html>
