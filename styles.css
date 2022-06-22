@@ -312,6 +312,7 @@ button:hover{
     margin-left: 18px;
     margin-top: 16px;
 }
+
 .vuoto{
     width: 1440px;
     height: 150px;
@@ -443,27 +444,49 @@ li a:visited:active {
             hue-rotate(131deg) brightness(86%) contrast(87%);
 }
 
-.new_container{
+.new_container {
+    align-items: center;
     display: flex;
     color: black;
     background-color: white;
-    margin-left: 160px;
+    margin-left: 166px;
     font-size: 30px;
-    width: 1120px;
+    width: 1112px;
     height: 65px;
     margin-top: -60px;
     border-radius: 5px;
     margin-bottom: 70px;
+    justify-content: space-between;
 }
-.copy{
+
+.new_container p {
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.copy {
     position: absolute;
-    background-color:hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
     width: 120px;
     height: 40px;
-    margin-top: 15px;
-    margin-left: 990px;
+    margin-left: 980px;
     border: none;
     border-radius: 5px;
     color: white;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.copied {
+    background-color: hsl(257, 27%, 26%);
+}
+
+.copied:hover {
+    background-color: hsl(257, 27%, 26%);
+}
+
+.short {
+    color: hsl(180, 66%, 49%);
+    margin-left: auto;
+    margin-right: 150px;
 }
